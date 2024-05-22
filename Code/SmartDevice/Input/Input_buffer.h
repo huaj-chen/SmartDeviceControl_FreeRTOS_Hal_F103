@@ -3,6 +3,8 @@
 
 #include "Input_system.h"
 #define BUFFER_SIZE 10 //环形缓冲区的大小
+
+
 //环形缓冲区存放输入事件
 typedef struct
 {
@@ -12,9 +14,8 @@ typedef struct
 } InputEventBuffer;
 
 int GetInputEvent(PInputEvent ptInputEvent);//业务系统调用来获取数据
+
 int PutInputEvent(PInputEvent ptInputEvent);//各输入调用来放入数据
-
-
 
 
 

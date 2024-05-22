@@ -7,6 +7,12 @@
 static volatile uint8_t key1_val = KEY_RELEASED;
 static volatile uint8_t key2_val = KEY_RELEASED;
 
+/**
+ * @brief 按键GPIO重新初始化，设置中断
+ * @version 1.0
+ * @Author huaj 
+ * @date 2024-05-22
+*/
 void KEY_GPIO_ReInit (void)
 {
 	GPIO_InitTypeDef GPIO_InitStruct = {0};
@@ -29,6 +35,12 @@ void KEY_GPIO_ReInit (void)
 	HAL_NVIC_EnableIRQ (EXTI4_IRQn);
 }
 
+/**
+ * @brief 外部中断3处理函数
+ * @version 1.0
+ * @Author huaj 
+ * @date 2024-05-22
+*/
 void EXTI3_IRQHandler(void)
 {	
 	HAL_GPIO_EXTI_IRQHandler(KEY1_Pin);

@@ -110,8 +110,7 @@ int main(void)
   while (1)
   {
 
-    LED_test();
-	  // Net_test();
+    Input_test();
     /* USER CODE END WHILE */
 	  
     /* USER CODE BEGIN 3 */

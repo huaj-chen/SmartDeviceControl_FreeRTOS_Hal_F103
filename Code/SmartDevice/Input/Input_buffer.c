@@ -2,7 +2,15 @@
 
 static InputEventBuffer g_tInputBuffer;
 
-int PutInputEvent(PInputEvent ptInputEvent)//各输入调用来放入数据
+/**
+ * @brief 各种外部输入调用 来放入数据
+ * @param ptInputEvent 
+ * @return {int} 
+ * @version 1.0
+ * @Author huaj 
+ * @date 2024-05-20
+*/
+int PutInputEvent(PInputEvent ptInputEvent)
 {
 	int i = (g_tInputBuffer.pW + 1) % BUFFER_SIZE;//将写地址控制在大小之内，且调整大小
 	/*防御性编程,防止遇到空指针*/
@@ -21,7 +29,15 @@ int PutInputEvent(PInputEvent ptInputEvent)//各输入调用来放入数据
 }
 
 
-int GetInputEvent(PInputEvent ptInputEvent)//业务系统调用来获取数据
+/**
+ * @brief 业务系统调用来获取 输入事件，实际上是读 输入缓冲区
+ * @param ptInputEvent 
+ * @return {int} 
+ * @version 1.0
+ * @Author huaj 
+ * @date 2024-05-20
+*/
+int GetInputEvent(PInputEvent ptInputEvent)
 {
 
 	/*防御性编程,防止遇到空指针*/
@@ -29,7 +45,6 @@ int GetInputEvent(PInputEvent ptInputEvent)//业务系统调用来获取数据
 	{
 		return -1;
 	}
-	
 	if(g_tInputBuffer.pR == g_tInputBuffer.pW)
 	{
 		return -1;
