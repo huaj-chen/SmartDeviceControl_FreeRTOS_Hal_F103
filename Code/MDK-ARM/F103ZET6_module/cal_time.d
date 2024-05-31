@@ -1,6 +1,9 @@
 f103zet6_module\cal_time.o: ..\SmartDevice\Chip_abstr_layer(CAL)\CAL_Time.c
 f103zet6_module\cal_time.o: ..\SmartDevice\Chip_abstr_layer(CAL)\CAL_Time.h
 f103zet6_module\cal_time.o: ../SmartDevice/Input/Input_system.h
+f103zet6_module\cal_time.o: ../SmartDevice/Input/GPIO_Key.h
+f103zet6_module\cal_time.o: ../SmartDevice/Input/Input_system.h
+f103zet6_module\cal_time.o: ../SmartDevice/Kernel_abstr_layer(KAL)/KAL_GPIO_Key.h
 f103zet6_module\cal_time.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h
 f103zet6_module\cal_time.o: ../Core/Inc/stm32f1xx_hal_conf.h
 f103zet6_module\cal_time.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h

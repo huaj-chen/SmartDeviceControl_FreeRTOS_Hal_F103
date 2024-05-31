@@ -46,6 +46,10 @@ f103zet6_module\main.o: ..\SmartDevice\Net\Net_system.h
 f103zet6_module\main.o: ..\SmartDevice\Net\Net_device.h
 f103zet6_module\main.o: ../SmartDevice/Kernel_abstr_layer(KAL)/KAL_Time.h
 f103zet6_module\main.o: ../SmartDevice/Input/Input_system.h
+f103zet6_module\main.o: ../SmartDevice/Input/GPIO_Key.h
+f103zet6_module\main.o: ../SmartDevice/Input/Input_system.h
+f103zet6_module\main.o: ../SmartDevice/Kernel_abstr_layer(KAL)/KAL_GPIO_Key.h
+f103zet6_module\main.o: ../SmartDevice/Input/Input_buffer.h
 f103zet6_module\main.o: ../Module_Drivers/driver_USART.h
 f103zet6_module\main.o: ../Module_Drivers/Ring_buffer.h
 f103zet6_module\main.o: ..\SmartDevice\Device\UART\UART_dev.h

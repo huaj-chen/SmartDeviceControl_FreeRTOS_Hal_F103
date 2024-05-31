@@ -74,13 +74,19 @@ void EnableUART3IRQ()
 // 	HAL_UART_IRQHandler (&huart1);
 // }
 
-// typedef void (*NetInputProcessCallback)(char c);//定义一个网络输入处理回调函数类型
-// static NetInputProcessCallback g_fNetInputProcessCallback;//定义一个函数
+static NetInputProcessCallback g_fNetInputProcessCallback;//定义一个函数指针变量
 
-// void SetNetInputProcessCallback(NetInputProcessCallback func)
-// {
-// 	g_fNetInputProcessCallback = func;
-// }
+/**
+ * @brief 设置网络输入回调函数
+ * @param func - NetInputProcessCallback传入一个指针类型
+ * @version 1.0
+ * @Author huaj 
+ * @date 2024-05-31
+*/
+void SetNetInputProcessCallback(NetInputProcessCallback func)
+{
+	g_fNetInputProcessCallback = func;
+}
 
 /**
  * @brief USART3 接收中断，接收网卡设备反馈的信息，放入环形缓冲区
@@ -103,8 +109,8 @@ void USART3_IRQHandler (void)
 	{
 		c = USART3->DR;//将数据寄存器的数据给C
 		ring_buffer_write(c, UART3_ringbuffer);//将数据放到环形缓冲区
-		// if(g_fNetInputProcessCallback)
-		// 	g_fNetInputProcessCallback(c);
+		if(g_fNetInputProcessCallback)//如果设置了网络输入回调函数，则执行该函数，对输入进行处理
+			g_fNetInputProcessCallback(c);
 	}
 	HAL_UART_IRQHandler(&huart3);
 }

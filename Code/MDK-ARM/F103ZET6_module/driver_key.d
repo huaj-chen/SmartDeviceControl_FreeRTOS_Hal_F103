@@ -1,7 +1,9 @@
 f103zet6_module\driver_key.o: ..\Module_Drivers\Key\driver_Key.c
 f103zet6_module\driver_key.o: ../SmartDevice/Input/Input_system.h
-f103zet6_module\driver_key.o: ../SmartDevice/Input/Input_buffer.h
 f103zet6_module\driver_key.o: ../SmartDevice/Input/GPIO_Key.h
+f103zet6_module\driver_key.o: ../SmartDevice/Input/Input_system.h
+f103zet6_module\driver_key.o: ../SmartDevice/Kernel_abstr_layer(KAL)/KAL_GPIO_Key.h
+f103zet6_module\driver_key.o: ../SmartDevice/Input/Input_buffer.h
 f103zet6_module\driver_key.o: D:\Keil_v5\ARM\ARM_Compiler_5.06u7\Bin\..\include\stdio.h
 f103zet6_module\driver_key.o: ..\Module_Drivers\Key\driver_Key.h
 f103zet6_module\driver_key.o: ../SmartDevice/Kernel_abstr_layer(KAL)/KAL_Time.h

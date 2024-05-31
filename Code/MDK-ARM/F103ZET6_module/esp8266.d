@@ -41,3 +41,6 @@ f103zet6_module\esp8266.o: ..\SmartDevice\Device\UART\UART_dev.h
 f103zet6_module\esp8266.o: D:\Keil_v5\ARM\ARM_Compiler_5.06u7\Bin\..\include\stdio.h
 f103zet6_module\esp8266.o: ../SmartDevice/Kernel_abstr_layer(KAL)/KAL_Time.h
 f103zet6_module\esp8266.o: ../SmartDevice/Input/Input_system.h
+f103zet6_module\esp8266.o: ../SmartDevice/Input/GPIO_Key.h
+f103zet6_module\esp8266.o: ../SmartDevice/Input/Input_system.h
+f103zet6_module\esp8266.o: ../SmartDevice/Kernel_abstr_layer(KAL)/KAL_GPIO_Key.h

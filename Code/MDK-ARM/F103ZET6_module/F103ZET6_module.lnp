@@ -39,6 +39,7 @@
 "f103zet6_module\gpio_key.o"
 "f103zet6_module\input_buffer.o"
 "f103zet6_module\input_system.o"
+"f103zet6_module\net_input.o"
 "f103zet6_module\input_test.o"
 "f103zet6_module\led_test.o"
 "f103zet6_module\display_test.o"

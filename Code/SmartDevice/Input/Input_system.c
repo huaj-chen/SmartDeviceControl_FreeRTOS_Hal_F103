@@ -1,5 +1,5 @@
 #include "Input_system.h"
-#include <GPIO_Key.h>
+
 
 /**
  * @brief 定义一个输入设备结构体指针，此指针作为链表头
@@ -33,6 +33,8 @@ void InputDeviceRegister(PInputDevice ptInputdevice)
 void AddInputDevice()
 {
 	AddInputDeviceGPIOKey();//注册按键为输入设备
+	AddInputDeviceNet();//将网卡添加为输入设备
+
 }
 
 

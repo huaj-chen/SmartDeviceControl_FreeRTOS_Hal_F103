@@ -7,8 +7,9 @@ void Net_test()
 	pNETDevice pNetDev;
 	char ip[20];
 	int port = 1234;
-	unsigned char data[200];
-	int LEN;
+	// unsigned char data[200];
+	// int LEN;
+	InputEvent event;//定义一个输入事件
 
 	//等待启动完毕
 	KAL_Delay(2000);
@@ -62,14 +63,26 @@ void Net_test()
 		return ;
 
 	}
-		
+	AddInputDevice();
+	InitInputDevice();	
+	// while(1)
+	// {
+	// 	if(0 == pNetDev ->Recv(pNetDev, data, &LEN, 1000))
+	// 	{
+	// 		data[LEN] = '\0';
+	// 		printf("GET NetData:%s\r\n",data);
+	// 	}	
+	// }
 	while(1)
 	{
-		if(0 == pNetDev ->Recv(pNetDev, data, &LEN, 1000))
+		if(GetInputEvent (&event) == 0)
 		{
-			data[LEN] = '\0';
-			printf("GET NetData:%s\r\n",data);
-		}	
+			printf("get input event:\r\n");
+			printf("type:%d\r\n",event.itype);
+			printf("time:%d\r\n",event.time);
+			printf("str:%s",event.str);
+		}
+
 	}
 }
 

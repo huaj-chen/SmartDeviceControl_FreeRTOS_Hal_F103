@@ -2,13 +2,14 @@
 #define _INPUT_BUFFER_H
 
 #include "Input_system.h"
-#define BUFFER_SIZE 10 //环形缓冲区的大小
+
+#define InputEvent_BUFFER_SIZE 10 //环形缓冲区的大小
 
 
 //环形缓冲区存放输入事件
 typedef struct
 {
-	InputEvent buffer[BUFFER_SIZE];/*缓冲区空间*/
+	InputEvent buffer[InputEvent_BUFFER_SIZE];/*缓冲区空间*/
 	volatile unsigned int pW;//写地址
 	volatile unsigned int pR;//读地址
 } InputEventBuffer;

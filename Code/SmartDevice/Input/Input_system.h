@@ -1,12 +1,16 @@
 #ifndef __INPUT_SYSTEM_H
 #define __INPUT_SYSTEM_H
+#include "GPIO_Key.h"
+// #include "Net_input.h"
 
 #ifndef NULL
 #define NULL (void*)0
 #endif
 
 #define TIME_T int
-#define INPUT_BUF_LEN 10
+#define INPUT_BUF_LEN 20
+
+
 
 typedef enum
 {
@@ -15,6 +19,7 @@ typedef enum
 	INPUT_EVENT_TYPE_NET,
 	INPUT_EVENT_TYPE_STDIO,
 }INPUT_EVENT_TYPE;
+
 
 /**
  * @brief 输入事件结构体

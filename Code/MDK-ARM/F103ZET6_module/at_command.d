@@ -40,3 +40,6 @@ f103zet6_module\at_command.o: ..\SmartDevice\Device\UART\UART_dev.h
 f103zet6_module\at_command.o: D:\Keil_v5\ARM\ARM_Compiler_5.06u7\Bin\..\include\stdio.h
 f103zet6_module\at_command.o: ../SmartDevice/Kernel_abstr_layer(KAL)/KAL_Time.h
 f103zet6_module\at_command.o: ../SmartDevice/Input/Input_system.h
+f103zet6_module\at_command.o: ../SmartDevice/Input/GPIO_Key.h
+f103zet6_module\at_command.o: ../SmartDevice/Input/Input_system.h
+f103zet6_module\at_command.o: ../SmartDevice/Kernel_abstr_layer(KAL)/KAL_GPIO_Key.h
