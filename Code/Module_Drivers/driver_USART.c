@@ -1,7 +1,5 @@
 #include "driver_USART.h"
-#include "usart.h"
-#include <string.h>
-#include <stdio.h>
+
 //将该信息发送出来
 void DebugPrint(const char *str)
 {
@@ -18,6 +16,7 @@ void DebugGet(char* str, uint16_t len)
 int fputc(int ch, FILE *f)
 {
 	while(HAL_UART_Transmit(&huart1, (uint8_t*)&ch, 1, 3000) != HAL_OK);
+	return 0;
 }
 
 int fgetc(FILE *f)
@@ -27,15 +26,28 @@ int fgetc(FILE *f)
 	return c;
 }
 
-void EnableDebugIRQ()
-{
-	HAL_NVIC_SetPriority(USART1_IRQn, 0, 1);
-	HAL_NVIC_EnableIRQ(USART1_IRQn);
 
-	__HAL_UART_ENABLE_IT(&huart1, UART_IT_TC|UART_IT_RXNE);
-}
+// /**
+//  * @brief 使能debug 串口发送中断 和 接收中断
+//  * @version 1.0
+//  * @Author huaj 
+//  * @date 2024-05-30
+// */
+// void EnableDebugIRQ()
+// {
+// 	HAL_NVIC_SetPriority(USART1_IRQn, 0, 1);
+// 	HAL_NVIC_EnableIRQ(USART1_IRQn);
+
+// 	__HAL_UART_ENABLE_IT(&huart1, UART_IT_TC|UART_IT_RXNE);
+// }
 
 
+/**
+ * @brief 使能UART3接收中断，作为接收网卡数据的串口
+ * @version 1.0
+ * @Author huaj 
+ * @date 2024-05-30
+*/
 void EnableUART3IRQ()
 {
 	HAL_NVIC_SetPriority(USART3_IRQn, 0, 1);
@@ -70,41 +82,51 @@ void EnableUART3IRQ()
 // 	g_fNetInputProcessCallback = func;
 // }
 
+/**
+ * @brief USART3 接收中断，接收网卡设备反馈的信息，放入环形缓冲区
+ * @version 1.0
+ * @Author huaj 
+ * @date 2024-05-30
+*/
+void USART3_IRQHandler (void)
+{
+	static ring_buffer* UART3_ringbuffer;
+	static int count = 0;
+	if(count == 0)
+	{
+		UART3_ringbuffer = GetUART3RingBuffer();
+		count++;
+	}
+	unsigned char c = 0;
 
-// void USART3_IRQHandler (void)
-// {
-// 	static ring_buffer *UART3_ringbuffer = GetUART3RingBuffer();
-// 	unsigned char c = 0;
-
-// 	if((USART3->SR &(1<<5)) != 0)//状态寄存器做判断
-// 	{
-// 		c = USART3->DR;//将数据寄存器的数据给C
-// 		ring_buffer_write (c, uart3_ringbuffer);
-// 		if(g_fNetInputProcessCallback)
-// 			g_fNetInputProcessCallback(c);
-// 	}
-// 	HAL_UART_IRQHandler (&huart3);
-// }
+	if((USART3->SR &(1<<5)) != 0)//状态寄存器做判断
+	{
+		c = USART3->DR;//将数据寄存器的数据给C
+		ring_buffer_write(c, UART3_ringbuffer);//将数据放到环形缓冲区
+		// if(g_fNetInputProcessCallback)
+		// 	g_fNetInputProcessCallback(c);
+	}
+	HAL_UART_IRQHandler(&huart3);
+}
 
 
 
-// /****************************************************************************
-// *函数名称：USART3_SendBytes
-// *功能描述：通过UART3发出多个数据
-// *输入参数：buf - 数据缓冲区
-// *输入参数：1en - 数据长度
-// *输出参数：无
-// *返回值：     	无
-// *修改日期			版本号			修改人			修改内容
-// 2024/05/02		V1.0		huaj		创建
-// ***************************************************************************/
-// void USART3_SendBytes(char *buf, int len)
-// {
-// 	int i;
-// 	for (i = 0;i < len; i++)
-// 	{
-// 		while((USART3->SR & (1 << 7)) = 8);
-// 		USART3->DR = buf[i];
-// 	}
-// }
+
+/**
+ * @brief 通过UART3发出多个数据，使用查询方式
+ * @param buf - 数据缓冲区
+ * @param len - 数据长度
+ * @version 1.0
+ * @Author huaj 
+ * @date 2024-05-30
+*/
+void USART3_SendBytes(char *buf, int len)
+{
+	int i;
+	for (i = 0;i < len; i++)
+	{
+		while((USART3->SR & (1 << 7)) == 0);//检测发送寄存器为 1 - 表示空闲，可以进行下一个发送
+		USART3->DR = buf[i];
+	}
+}
 

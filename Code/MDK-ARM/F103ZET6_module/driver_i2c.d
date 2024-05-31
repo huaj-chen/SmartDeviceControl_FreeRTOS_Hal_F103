@@ -1,5 +1,6 @@
-f103zet6_module\driver_i2c.o: ..\Module_Drivers\driver_I2C.c
-f103zet6_module\driver_i2c.o: ..\Module_Drivers\driver_I2C.h
+f103zet6_module\driver_i2c.o: ..\Module_Drivers\I2C\driver_I2C.c
+f103zet6_module\driver_i2c.o: ..\Module_Drivers\I2C\driver_I2C.h
+f103zet6_module\driver_i2c.o: ../Core/Inc/main.h
 f103zet6_module\driver_i2c.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h
 f103zet6_module\driver_i2c.o: ../Core/Inc/stm32f1xx_hal_conf.h
 f103zet6_module\driver_i2c.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h

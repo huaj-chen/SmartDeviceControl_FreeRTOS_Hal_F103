@@ -340,7 +340,7 @@
               <MiscControls></MiscControls>
               <Define>USE_HAL_DRIVER,STM32F103xE</Define>
               <Undefine></Undefine>
-              <IncludePath>../Core/Inc;../Drivers/STM32F1xx_HAL_Driver/Inc;../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy;../Drivers/CMSIS/Device/ST/STM32F1xx/Include;../Drivers/CMSIS/Include;..\Module_Drivers;..\SmartDevice\Chip_abstr_layer(CAL);..\SmartDevice\Input;..\SmartDevice\Kernel_abstr_layer(KAL);..\SmartDevice\UnitTest;..\SmartDevice\Device</IncludePath>
+              <IncludePath>../Core/Inc;../Drivers/STM32F1xx_HAL_Driver/Inc;../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy;../Drivers/CMSIS/Device/ST/STM32F1xx/Include;../Drivers/CMSIS/Include;../Module_Drivers;../SmartDevice/Chip_abstr_layer(CAL);../SmartDevice/Input;../SmartDevice/Kernel_abstr_layer(KAL);../SmartDevice/UnitTest;../SmartDevice/Device;../Module_Drivers/I2C;../Module_Drivers/Key;../Module_Drivers/LED;../Module_Drivers/OLED;../SmartDevice/config;../SmartDevice/Device/Display;..\SmartDevice\Device\UART;..\SmartDevice\Net;..\SmartDevice\Net\ESP8266;..\SmartDevice\Net\AT_Command</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -490,14 +490,14 @@
           <GroupName>Drivers/CMSIS</GroupName>
           <Files>
             <File>
-              <FileName>system_stm32f1xx.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>../Core/Src/system_stm32f1xx.c</FilePath>
-            </File>
-            <File>
               <FileName>startup_stm32f103xe.s</FileName>
               <FileType>2</FileType>
               <FilePath>.\startup_stm32f103xe.s</FilePath>
+            </File>
+            <File>
+              <FileName>system_stm32f1xx.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>../Core/Src/system_stm32f1xx.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -505,34 +505,34 @@
           <GroupName>ModuleDriver</GroupName>
           <Files>
             <File>
-              <FileName>driver_Key.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Module_Drivers\driver_Key.c</FilePath>
-            </File>
-            <File>
               <FileName>driver_USART.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\Module_Drivers\driver_USART.c</FilePath>
             </File>
             <File>
-              <FileName>driver_LED.c</FileName>
+              <FileName>Ring_buffer.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\Module_Drivers\driver_LED.c</FilePath>
+              <FilePath>..\Module_Drivers\Ring_buffer.c</FilePath>
             </File>
             <File>
               <FileName>driver_I2C.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\Module_Drivers\driver_I2C.c</FilePath>
+              <FilePath>..\Module_Drivers\I2C\driver_I2C.c</FilePath>
+            </File>
+            <File>
+              <FileName>driver_Key.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Module_Drivers\Key\driver_Key.c</FilePath>
+            </File>
+            <File>
+              <FileName>driver_LED.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Module_Drivers\LED\driver_LED.c</FilePath>
             </File>
             <File>
               <FileName>driver_OLED.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\Module_Drivers\driver_OLED.c</FilePath>
-            </File>
-            <File>
-              <FileName>Ring_buffer.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Module_Drivers\Ring_buffer.c</FilePath>
+              <FilePath>..\Module_Drivers\OLED\driver_OLED.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -554,6 +554,16 @@
               <FileType>1</FileType>
               <FilePath>..\SmartDevice\Kernel_abstr_layer(KAL)\KAL_LED_Device.c</FilePath>
             </File>
+            <File>
+              <FileName>KAL_OLED_device.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\SmartDevice\Kernel_abstr_layer(KAL)\KAL_OLED_device.c</FilePath>
+            </File>
+            <File>
+              <FileName>KAL_UART_dev.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\SmartDevice\Kernel_abstr_layer(KAL)\KAL_UART_dev.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -573,6 +583,16 @@
               <FileName>CAL_LED_Device.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\SmartDevice\Chip_abstr_layer(CAL)\CAL_LED_Device.c</FilePath>
+            </File>
+            <File>
+              <FileName>CAL_OLED_device.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\SmartDevice\Chip_abstr_layer(CAL)\CAL_OLED_device.c</FilePath>
+            </File>
+            <File>
+              <FileName>CAL_UART_dev.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\SmartDevice\Chip_abstr_layer(CAL)\CAL_UART_dev.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -609,6 +629,16 @@
               <FileType>1</FileType>
               <FilePath>..\SmartDevice\UnitTest\LED_test.c</FilePath>
             </File>
+            <File>
+              <FileName>Display_Test.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\SmartDevice\UnitTest\Display_Test.c</FilePath>
+            </File>
+            <File>
+              <FileName>Net_test.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\SmartDevice\UnitTest\Net_test.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -618,6 +648,51 @@
               <FileName>LED_Device.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\SmartDevice\Device\LED_Device.c</FilePath>
+            </File>
+            <File>
+              <FileName>Display_device.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\SmartDevice\Device\Display\Display_device.c</FilePath>
+            </File>
+            <File>
+              <FileName>Display_system.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\SmartDevice\Device\Display\Display_system.c</FilePath>
+            </File>
+            <File>
+              <FileName>OLED_device.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\SmartDevice\Device\Display\OLED_device.c</FilePath>
+            </File>
+            <File>
+              <FileName>UART_dev.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\SmartDevice\Device\UART\UART_dev.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>Net</GroupName>
+          <Files>
+            <File>
+              <FileName>Net_Device.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\SmartDevice\Net\Net_Device.c</FilePath>
+            </File>
+            <File>
+              <FileName>Net_system.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\SmartDevice\Net\Net_system.c</FilePath>
+            </File>
+            <File>
+              <FileName>ESP8266.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\SmartDevice\Net\ESP8266\ESP8266.c</FilePath>
+            </File>
+            <File>
+              <FileName>AT_Command.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\SmartDevice\Net\AT_Command\AT_Command.c</FilePath>
             </File>
           </Files>
         </Group>

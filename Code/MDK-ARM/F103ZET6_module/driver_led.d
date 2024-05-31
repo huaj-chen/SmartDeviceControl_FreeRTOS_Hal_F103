@@ -1,4 +1,4 @@
-f103zet6_module\driver_led.o: ..\Module_Drivers\driver_LED.c
+f103zet6_module\driver_led.o: ..\Module_Drivers\LED\driver_LED.c
 f103zet6_module\driver_led.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h
 f103zet6_module\driver_led.o: ../Core/Inc/stm32f1xx_hal_conf.h
 f103zet6_module\driver_led.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h
@@ -25,5 +25,5 @@ f103zet6_module\driver_led.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_
 f103zet6_module\driver_led.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h
 f103zet6_module\driver_led.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h
 f103zet6_module\driver_led.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h
-f103zet6_module\driver_led.o: ..\SmartDevice\Device\LED_Device.h
-f103zet6_module\driver_led.o: ..\Module_Drivers\driver_LED.h
+f103zet6_module\driver_led.o: ../SmartDevice/Device/LED_Device.h
+f103zet6_module\driver_led.o: ..\Module_Drivers\LED\driver_LED.h

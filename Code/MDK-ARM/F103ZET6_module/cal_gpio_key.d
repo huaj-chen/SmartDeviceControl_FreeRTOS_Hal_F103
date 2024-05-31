@@ -1,8 +1,8 @@
 f103zet6_module\cal_gpio_key.o: ..\SmartDevice\Chip_abstr_layer(CAL)\CAL_GPIO_Key.c
 f103zet6_module\cal_gpio_key.o: ..\SmartDevice\Chip_abstr_layer(CAL)\CAL_GPIO_Key.h
-f103zet6_module\cal_gpio_key.o: ..\Module_Drivers\driver_Key.h
-f103zet6_module\cal_gpio_key.o: ..\SmartDevice\Kernel_abstr_layer(KAL)\KAL_Time.h
-f103zet6_module\cal_gpio_key.o: ..\SmartDevice\Input\Input_system.h
+f103zet6_module\cal_gpio_key.o: ../Module_Drivers/Key/driver_Key.h
+f103zet6_module\cal_gpio_key.o: ../SmartDevice/Kernel_abstr_layer(KAL)/KAL_Time.h
+f103zet6_module\cal_gpio_key.o: ../SmartDevice/Input/Input_system.h
 f103zet6_module\cal_gpio_key.o: ../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h
 f103zet6_module\cal_gpio_key.o: ../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xe.h
 f103zet6_module\cal_gpio_key.o: ../Drivers/CMSIS/Include/core_cm3.h

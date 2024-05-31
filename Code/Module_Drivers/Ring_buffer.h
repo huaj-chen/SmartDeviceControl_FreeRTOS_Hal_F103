@@ -1,7 +1,7 @@
 #ifndef _RING_BUFFER_H
 #define _RING_BUFFER_H
 
-#define BUFFER_SIZE 10 //环形缓冲区的大小
+#define BUFFER_SIZE 100 //环形缓冲区的大小
 
 //环形缓冲区存放输入事件
 typedef struct

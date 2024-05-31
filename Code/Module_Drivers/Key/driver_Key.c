@@ -8,7 +8,7 @@ static volatile uint8_t key1_val = KEY_RELEASED;
 static volatile uint8_t key2_val = KEY_RELEASED;
 
 /**
- * @brief 按键GPIO重新初始化，设置中断
+ * @brief 按键GPIO重新初始化，设置中断为上升和下降
  * @version 1.0
  * @Author huaj 
  * @date 2024-05-22

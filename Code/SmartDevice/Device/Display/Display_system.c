@@ -1,34 +1,34 @@
-#include "OLED_device.h"
+#include "Display_system.h"
 
 
 
 
 
-//==================================================================
-//函 数 AddDisplayDevices
-//功    能：注册多个显示设备，将其加入到链表中
-//输入参数：
-//返 回 值：
-//日    期：
-//版    本：
-//==================================================================
+
+/**
+ * @brief 注册多个显示设备，将其加入到链表中
+ * @version 1.0
+ * @Author huaj 
+ * @date 2024-05-23
+*/
 void AddDisplayDevices()
 {
 	AddDisplayDeviceOLED();//注册OLED
 }
 
 
-//==================================================================
-//函 数：GetDisplayDevice
-//功    能：根据名字获得显示结构体指针
-//输入参数：名字
-//返 回 值：pDisplayDevice
-//日    期：2024/04/29
-//版    本：
-//==================================================================
+
+/**
+ * @brief Get the Display Device object
+ * @param name 
+ * @return {pDisplayDevice} 
+ * @version 1.0
+ * @Author huaj 
+ * @date 2024-05-23
+*/
 pDisplayDevice GetDisplayDevice(char *name)
 {
-	return __GetDisplayDevice;
+	return __GetDisplayDevice(name);
 }
 
 

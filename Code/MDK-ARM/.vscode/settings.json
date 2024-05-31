@@ -1,5 +1,34 @@
 {
     "files.associations": {
-        "input_system.h": "c"
+        "input_system.h": "c",
+        "display_device.h": "c",
+        "driver_i2c.h": "c",
+        "cal_oled_device.h": "c",
+        "kal_oled_device.h": "c",
+        "display_system.h": "c",
+        "oled_device.h": "c",
+        "driver_oled.h": "c",
+        "oledfont.h": "c",
+        "stdlib.h": "c",
+        "display_test.h": "c",
+        "led_device.h": "c",
+        "led_test.h": "c",
+        "string.h": "c",
+        "net_device.h": "c",
+        "net_system.h": "c",
+        "esp8266.h": "c",
+        "at_command.h": "c",
+        "uart_dev.h": "c",
+        "kal_uart_dev.h": "c",
+        "cal_uart_dev.h": "c",
+        "ring_buffer.h": "c",
+        "driver_usart.h": "c",
+        "net_test.h": "c",
+        "kal_time.h": "c",
+        "main.h": "c",
+        "stm32f1xx_hal.h": "c",
+        "stm32f1xx_hal_conf.h": "c",
+        "usart.h": "c",
+        "gpio.h": "c"
     }
 }

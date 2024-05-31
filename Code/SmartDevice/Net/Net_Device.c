@@ -1,16 +1,15 @@
 #include "Net_Device.h"
 
 
-pNetDevice g_ptNetDevices;
+pNETDevice g_ptNetDevices;//网卡结构体链表
 
-//==================================================================
-//函    数：	NetDeviceRegister
-//功   	能：	对网卡进行注册，添加到链表
-//输入参数：	网卡设备的结构体指针；
-//返 回 值：
-//日    期：	2024/05/01
-//版    本：
-//==================================================================
+/**
+ * @brief 对网卡进行注册，添加到链表
+ * @param ptNetDevice - 网卡设备的结构体指针
+ * @version 1.0
+ * @Author huaj 
+ * @date 2024-05-30
+*/
 void NetDeviceRegister(pNETDevice ptNetDevice)
 {
 	ptNetDevice->pNext = g_ptNetDevices;
@@ -19,18 +18,15 @@ void NetDeviceRegister(pNETDevice ptNetDevice)
 
 
 
-
-
-pNetDevice __GetNetDevice(char* name)
+pNETDevice __GetNetDevice(char* name)
 {
-	pNetDevice pTmp = g_ptNetDevices;
-	while(ptmp)
+	pNETDevice pTmp = g_ptNetDevices;
+	while(pTmp)
 	{
 		if(strcmp(pTmp->name, name) == 0)
 		{
 			return pTmp;	
 		}
-		else
 			
 	}
 }

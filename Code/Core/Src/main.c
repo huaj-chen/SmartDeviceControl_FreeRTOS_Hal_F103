@@ -20,16 +20,15 @@
 #include "main.h"
 #include "usart.h"
 #include "gpio.h"
-#include "stdio.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include <Input_test.h>
 #include "led_test.h"
+#include "Display_Test.h"
+#include "Net_test.h"
 #include "driver_USART.h"
 #include "driver_Key.h"
-#include "driver_I2C.h"
-#include "driver_OLED.h"
 
 /* USER CODE END Includes */
 
@@ -72,7 +71,7 @@ void SystemClock_Config(void);
   */
 int main(void)
 {
-//	uint8_t buf[128] = {0};
+
   /* USER CODE BEGIN 1 */
 
   /* USER CODE END 1 */
@@ -99,12 +98,12 @@ int main(void)
   MX_USART3_UART_Init();
   /* USER CODE BEGIN 2 */
   // EnableDebugIRQ();
-  // EnableUART3IRQ();
+  EnableUART3IRQ();
 
-  
+
   /* USER CODE END 2 */
-
-  printf("Hello,world");
+  Net_test();
+  
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
@@ -112,7 +111,7 @@ int main(void)
 
     Input_test();
     /* USER CODE END WHILE */
-	  
+
     /* USER CODE BEGIN 3 */
 
 

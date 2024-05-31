@@ -1,8 +1,21 @@
-#include "Display_device.h"
+#include "OLED_device.h"
+
+
 
 /*显示设备结构体下的一层，构建结构体里相关OLED的函数*/
 //这里的OLED 是 128*64
+/*128*64 bits , 1024 bytes*/
+static unsigned char g_OLEDFramebuffer[1024];
 
+ 
+/**
+ * @brief OLED初始化
+ * @param ptDisplayDevice 
+ * @return {int} 
+ * @version 1.0
+ * @Author huaj 
+ * @date 2024-05-22
+*/
 static int OLEDDeviceInit(struct DisplayDevice* ptDisplayDevice)
 {
 	/*初始化OLED*/
@@ -10,14 +23,20 @@ static int OLEDDeviceInit(struct DisplayDevice* ptDisplayDevice)
 }
 
 
+/**
+ * @brief 刷新OLED图像
+ * @param ptDisplayDevice 
+ * @version 1.0
+ * @Author huaj 
+ * @date 2024-05-22
+*/
 static void OLEDDeviceFlush(struct DisplayDevice* ptDisplayDevice)
 {
 	/*把g_OLEDFramebuffer的数据搬到OLED自带的显存里面*/
-	return KAL_OLEDDeviceFlush(ptDisplayDevice);
+	KAL_OLEDDeviceFlush(ptDisplayDevice);
 }
 
-/*128*64 bits , 1024 bytes*/
-static unsigned char g_OLEDFramebuffer[1024];
+
 
 
 /*为OLED构建一个displayDevice 结构体*/
@@ -27,19 +46,18 @@ static DisplayDevice g_tOLEDDevice = {
 	128,
 	64,
 	1,
+	128*64*1/8,
 	OLEDDeviceInit,
 	OLEDDeviceFlush
 };
 
 
-//==================================================================
-//函 数 AddDisplayDeviceOLED
-//功    能：将OLED注册到显示设备系统当中去
-//输入参数：无
-//返 回 值：无
-//日    期：
-//版    本：
-//==================================================================
+/**
+ * @brief 注册OLED为显示设备
+ * @version 1.0
+ * @Author huaj 
+ * @date 2024-05-22
+*/
 void AddDisplayDeviceOLED(void)
 {
 

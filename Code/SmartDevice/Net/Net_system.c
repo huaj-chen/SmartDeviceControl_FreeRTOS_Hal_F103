@@ -1,32 +1,28 @@
-#include "Net_device.h"
+#include "Net_system.h"
 
 
 
-
-
-//==================================================================
-//函 数 AddNetDevices
-//功    能：注册多个网卡设备，将其加入到链表中
-//输入参数：无
-//返 回 值：无
-//日    期：2024/05/01
-//版    本：
-//==================================================================
+/**
+ * @brief 注册多个网卡设备，将其加入到链表中
+ * @version 1.0
+ * @Author huaj 
+ * @date 2024-05-30
+*/
 void AddNetDevices()
 {
 	AddNetDeviceESP8266();
 }
 
 
-//==================================================================
-//函 数：GetNetDevice
-//功    能：根据名字获得网卡结构体指针
-//输入参数：名字
-//返 回 值：pNetDevice
-//日    期：2024/05/01
-//版    本：
-//==================================================================
-pNetDevice GetNetDevice(char *name)
+/**
+ * @brief Get the Net Device object
+ * @param name 
+ * @return {pNETDevice} 
+ * @version 1.0
+ * @Author huaj 
+ * @date 2024-05-30
+*/
+pNETDevice GetNetDevice(char *name)
 {
 	return __GetNetDevice(name);
 }

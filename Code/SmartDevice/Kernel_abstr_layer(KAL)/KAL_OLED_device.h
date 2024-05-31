@@ -1,9 +1,11 @@
 #ifndef _KAL_OLED_DEVICE_H
 #define _KAL_OLED_DEVICE_H
+#include "CAL_OLED_device.h"
+#include "Display_device.h"
 
-static int KAL_OLEDDeviceInit(struct DisplayDevice* ptDisplayDevice)
+int KAL_OLEDDeviceInit(struct DisplayDevice* ptDisplayDevice);
+void KAL_OLEDDeviceFlush(struct DisplayDevice* ptDisplayDevice);
 
-static void KAL_OLEDDeviceFlush(struct DisplayDevice* ptDisplayDevice)
 
 
 
