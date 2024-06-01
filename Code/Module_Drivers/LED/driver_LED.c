@@ -20,20 +20,22 @@ int HAL_LEDDeviceControl(struct LEDDevice* ptLEDDevice, int iStatus )
 
 		return -1;
 	}
-	GPIO_PinState Pin_State;//这里必须用PinState定义的
-	Pin_State = iStatus ? GPIO_PIN_RESET : GPIO_PIN_SET;
+	static GPIO_PinState Pin_State;//这里必须用PinState定义的
+	if( iStatus == 2)//如果为状态2，则进行反转
+	{
+		Pin_State = !Pin_State;
+	}
+	else 
+		Pin_State = iStatus ? GPIO_PIN_RESET : GPIO_PIN_SET;
 
 	
 	switch (ptLEDDevice->which)
 	{
-		case LED_WHITE:
+		case LED_1:
 			HAL_GPIO_WritePin (WHITE_GPIO_Port, WHITE_Pin, Pin_State);
 			break;
-		case LED_BLUE:
+		case LED_2:
 			HAL_GPIO_WritePin (BLUE_GPIO_Port, BLUE_Pin, Pin_State);
-			break;
-		case LED_GREEN:
-			HAL_GPIO_WritePin (GREEN_GPIO_Port, GREEN_Pin, Pin_State);
 			break;
 		default:
 			return -1;

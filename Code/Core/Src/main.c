@@ -29,7 +29,7 @@
 #include "Net_test.h"
 #include "driver_USART.h"
 #include "driver_Key.h"
-
+#include "App.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -102,14 +102,15 @@ int main(void)
 
 
   /* USER CODE END 2 */
-  Net_test();
+  
   
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
 
-    Input_test();
+    App();
+
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */

@@ -340,7 +340,7 @@
               <MiscControls></MiscControls>
               <Define>USE_HAL_DRIVER,STM32F103xE</Define>
               <Undefine></Undefine>
-              <IncludePath>../Core/Inc;../Drivers/STM32F1xx_HAL_Driver/Inc;../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy;../Drivers/CMSIS/Device/ST/STM32F1xx/Include;../Drivers/CMSIS/Include;../Module_Drivers;../SmartDevice/Chip_abstr_layer(CAL);../SmartDevice/Input;../SmartDevice/Kernel_abstr_layer(KAL);../SmartDevice/UnitTest;../SmartDevice/Device;../Module_Drivers/I2C;../Module_Drivers/Key;../Module_Drivers/LED;../Module_Drivers/OLED;../SmartDevice/config;../SmartDevice/Device/Display;..\SmartDevice\Device\UART;..\SmartDevice\Net;..\SmartDevice\Net\ESP8266;..\SmartDevice\Net\AT_Command</IncludePath>
+              <IncludePath>../Core/Inc;../Drivers/STM32F1xx_HAL_Driver/Inc;../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy;../Drivers/CMSIS/Device/ST/STM32F1xx/Include;../Drivers/CMSIS/Include;../Module_Drivers;../SmartDevice/Chip_abstr_layer(CAL);../SmartDevice/Input;../SmartDevice/Kernel_abstr_layer(KAL);../SmartDevice/UnitTest;../SmartDevice/Device;../Module_Drivers/I2C;../Module_Drivers/Key;../Module_Drivers/LED;../Module_Drivers/OLED;../SmartDevice/config;../SmartDevice/Device/Display;..\SmartDevice\Device\UART;..\SmartDevice\Net;..\SmartDevice\Net\ESP8266;..\SmartDevice\Net\AT_Command;..\SmartDevice\Message;..\SmartDevice\App</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -698,6 +698,26 @@
               <FileName>AT_Command.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\SmartDevice\Net\AT_Command\AT_Command.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>Message</GroupName>
+          <Files>
+            <File>
+              <FileName>Message.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\SmartDevice\Message\Message.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>App</GroupName>
+          <Files>
+            <File>
+              <FileName>App.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\SmartDevice\App\App.c</FilePath>
             </File>
           </Files>
         </Group>

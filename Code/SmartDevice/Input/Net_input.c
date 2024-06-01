@@ -94,7 +94,7 @@ static void ESP8266DataProcessCallback(char c)
 }
 
 /**
- * @brief /给UART中断函数设置一个输入回调函数，在这个回调函数 去解析数据
+ * @brief 为UART中断函数设置一个输入回调函数，在这个回调函数 去解析数据
  * @return {int} 
  * @version 1.0
  * @Author huaj 

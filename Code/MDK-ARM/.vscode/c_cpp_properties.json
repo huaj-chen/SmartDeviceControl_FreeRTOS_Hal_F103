@@ -24,6 +24,8 @@
                 "d:\\huaJ_Files\\huaj_proj_ing\\SmartDeviceControl_FreeRTOS_Hal_Zet6\\Code\\SmartDevice\\Net",
                 "d:\\huaJ_Files\\huaj_proj_ing\\SmartDeviceControl_FreeRTOS_Hal_Zet6\\Code\\SmartDevice\\Net\\ESP8266",
                 "d:\\huaJ_Files\\huaj_proj_ing\\SmartDeviceControl_FreeRTOS_Hal_Zet6\\Code\\SmartDevice\\Net\\AT_Command",
+                "d:\\huaJ_Files\\huaj_proj_ing\\SmartDeviceControl_FreeRTOS_Hal_Zet6\\Code\\SmartDevice\\Message",
+                "d:\\huaJ_Files\\huaj_proj_ing\\SmartDeviceControl_FreeRTOS_Hal_Zet6\\Code\\SmartDevice\\App",
                 "D:\\Keil_v5\\ARM\\ARMCC\\include",
                 "d:\\huaJ_Files\\huaj_proj_ing\\SmartDeviceControl_FreeRTOS_Hal_Zet6\\Code\\Core\\Src",
                 "d:\\huaJ_Files\\huaj_proj_ing\\SmartDeviceControl_FreeRTOS_Hal_Zet6\\Code\\Drivers\\STM32F1xx_HAL_Driver\\Src",

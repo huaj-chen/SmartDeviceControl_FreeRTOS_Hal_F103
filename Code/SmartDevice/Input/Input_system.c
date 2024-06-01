@@ -39,7 +39,7 @@ void AddInputDevice()
 
 
 /**
- * @brief 把链表里的设备都拿出来初始化
+ * @brief 把输入设备链表里的设备都拿出来初始化
  * @version 1.0
  * @Author huaj 
  * @date 2024-05-20

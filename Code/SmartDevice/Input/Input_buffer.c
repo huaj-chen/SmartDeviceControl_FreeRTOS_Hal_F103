@@ -31,7 +31,7 @@ int PutInputEvent(PInputEvent ptInputEvent)
 
 /**
  * @brief 业务系统调用来获取 输入事件，实际上是读 输入缓冲区
- * @param ptInputEvent 
+ * @param ptInputEvent - 用以接收输入事件
  * @return {int} 
  * @version 1.0
  * @Author huaj 

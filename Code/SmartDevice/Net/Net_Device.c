@@ -18,6 +18,14 @@ void NetDeviceRegister(pNETDevice ptNetDevice)
 
 
 
+/**
+ * @brief 根据名字获得网卡设备结构体，供net_system调用
+ * @param name 
+ * @return {pNETDevice} 
+ * @version 1.0
+ * @Author huaj 
+ * @date 2024-06-01
+*/
 pNETDevice __GetNetDevice(char* name)
 {
 	pNETDevice pTmp = g_ptNetDevices;

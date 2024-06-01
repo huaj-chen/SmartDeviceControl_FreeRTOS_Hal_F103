@@ -3,9 +3,8 @@
 
 
 enum LED{
-	LED_WHITE = 0,
-	LED_BLUE,
-	LED_GREEN
+	LED_1 = 1,
+	LED_2,
 };
 
 #ifndef NULL

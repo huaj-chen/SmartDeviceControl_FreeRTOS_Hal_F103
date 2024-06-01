@@ -8,13 +8,11 @@
 void LED_test(void)
 {
 	
-	pLEDDevice p1 = GetLEDDevice(LED_WHITE);
-	pLEDDevice p2 = GetLEDDevice(LED_BLUE);
-	pLEDDevice p3 = GetLEDDevice(LED_GREEN);
+	pLEDDevice p1 = GetLEDDevice(LED_1);
+	pLEDDevice p2 = GetLEDDevice(LED_2);
 
 	p1 ->LEDinit(p1);
 	p2 ->LEDinit(p2);
-	p3 ->LEDinit(p3);
 
 	while(1)
 	{	

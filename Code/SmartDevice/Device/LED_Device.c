@@ -34,9 +34,8 @@ static    int  LEDDeviceControl(struct LEDDevice* ptLEDDevice, int iStatus)
 
 //本来便已经构建好各个LED的结构体，等待被获取而使用
 static LEDDevice g_tLEDDevice[] = {
-	{LED_WHITE, LEDDeviceInit, LEDDeviceControl},
-	{LED_BLUE, LEDDeviceInit, LEDDeviceControl},
-	{LED_GREEN, LEDDeviceInit, LEDDeviceControl}
+	{LED_1, LEDDeviceInit, LEDDeviceControl},
+	{LED_2, LEDDeviceInit, LEDDeviceControl},
 };
 
 
@@ -51,9 +50,9 @@ static LEDDevice g_tLEDDevice[] = {
 */
 pLEDDevice GetLEDDevice(int which)
 {
-	if(which >= LED_WHITE && which <= LED_GREEN)
+	if(which >= LED_1 && which <= LED_2)
 	{
-		return &g_tLEDDevice[which];
+		return &g_tLEDDevice[which - 1];
 	}
 	else 
 		return NULL;

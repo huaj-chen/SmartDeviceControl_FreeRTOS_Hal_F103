@@ -53,6 +53,8 @@
 "f103zet6_module\net_system.o"
 "f103zet6_module\esp8266.o"
 "f103zet6_module\at_command.o"
+"f103zet6_module\message.o"
+"f103zet6_module\app.o"
 --library_type=microlib --strict --scatter "F103ZET6_module\F103ZET6_module.sct"
 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers

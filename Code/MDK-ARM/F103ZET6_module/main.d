@@ -57,3 +57,6 @@ f103zet6_module\main.o: ../SmartDevice/Kernel_abstr_layer(KAL)/KAL_UART_dev.h
 f103zet6_module\main.o: ../SmartDevice/Chip_abstr_layer(CAL)/CAL_UART_dev.h
 f103zet6_module\main.o: ../Module_Drivers/driver_USART.h
 f103zet6_module\main.o: ../Module_Drivers/Key/driver_Key.h
+f103zet6_module\main.o: ..\SmartDevice\App\App.h
+f103zet6_module\main.o: ..\SmartDevice\Message\Message.h
+f103zet6_module\main.o: ../SmartDevice/Device/LED_Device.h

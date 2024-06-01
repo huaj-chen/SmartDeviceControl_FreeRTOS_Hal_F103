@@ -33,6 +33,9 @@
         "net_input.h": "c",
         "input_buffer.h": "c",
         "gpio_key.h": "c",
-        "kal_gpio_key.h": "c"
+        "kal_gpio_key.h": "c",
+        "message.h": "c",
+        "app.h": "c",
+        "stdio.h": "c"
     }
 }
