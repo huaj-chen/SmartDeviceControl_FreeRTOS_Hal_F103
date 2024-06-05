@@ -1,6 +1,6 @@
 #ifndef _INPUT_BUFFER_H
 #define _INPUT_BUFFER_H
-
+#include "cmsis_os2.h"           
 #include "Input_system.h"
 
 #define InputEvent_BUFFER_SIZE 10 //环形缓冲区的大小

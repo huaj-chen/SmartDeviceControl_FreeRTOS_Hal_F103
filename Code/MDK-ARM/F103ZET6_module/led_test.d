@@ -24,6 +24,8 @@ f103zet6_module\led_test.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_co
 f103zet6_module\led_test.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h
 f103zet6_module\led_test.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h
 f103zet6_module\led_test.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h
+f103zet6_module\led_test.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h
+f103zet6_module\led_test.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h
 f103zet6_module\led_test.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h
 f103zet6_module\led_test.o: D:\Keil_v5\ARM\ARM_Compiler_5.06u7\Bin\..\include\stdio.h
 f103zet6_module\led_test.o: ..\SmartDevice\UnitTest\led_test.h

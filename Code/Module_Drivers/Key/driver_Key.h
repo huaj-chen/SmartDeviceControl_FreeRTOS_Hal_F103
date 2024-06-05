@@ -3,6 +3,7 @@
 
 #include "KAL_Time.h"
 #include "stm32f1xx.h"
+#include "cmsis_os2.h" 
 
 #define KEY_PRESSED             (0)
 #define KEY_RELEASED             (1)

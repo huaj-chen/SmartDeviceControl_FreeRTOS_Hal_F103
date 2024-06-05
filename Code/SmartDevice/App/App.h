@@ -13,5 +13,8 @@
 #include "Input_system.h"
 #include "Input_buffer.h"
 
-void App(void);
+void Init_Connect_Display(void);
+
+void SmartDeviceControl(char *strJson);
+
 #endif

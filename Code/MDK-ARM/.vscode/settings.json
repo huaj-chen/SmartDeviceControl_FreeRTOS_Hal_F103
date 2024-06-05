@@ -36,6 +36,27 @@
         "kal_gpio_key.h": "c",
         "message.h": "c",
         "app.h": "c",
-        "stdio.h": "c"
+        "stdio.h": "c",
+        "freertos.h": "c",
+        "freertosconfig.h": "c",
+        "cmsis_os.h": "c",
+        "cmsis_os2.h": "c",
+        "app_task.h": "c",
+        "tim.h": "c",
+        "projdefs.h": "c",
+        "stddef.h": "c",
+        "portable.h": "c",
+        "portmacro.h": "c",
+        "task.h": "c",
+        "driver_key.h": "c",
+        "stm32f1xx.h": "c",
+        "bit": "c",
+        "compare": "c",
+        "cstddef": "c",
+        "limits": "c",
+        "type_traits": "c",
+        "xmemory": "c",
+        "xstring": "c",
+        "xutility": "c"
     }
 }

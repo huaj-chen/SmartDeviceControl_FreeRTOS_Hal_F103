@@ -29,9 +29,11 @@ f103zet6_module\uart_dev.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_co
 f103zet6_module\uart_dev.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h
 f103zet6_module\uart_dev.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h
 f103zet6_module\uart_dev.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h
+f103zet6_module\uart_dev.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h
+f103zet6_module\uart_dev.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h
 f103zet6_module\uart_dev.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h
 f103zet6_module\uart_dev.o: ../Core/Inc/usart.h
 f103zet6_module\uart_dev.o: ../Module_Drivers/Ring_buffer.h
-f103zet6_module\uart_dev.o: ..\SmartDevice\Device\UART\UART_dev.h
+f103zet6_module\uart_dev.o: ../SmartDevice/Device/UART/UART_dev.h
 f103zet6_module\uart_dev.o: D:\Keil_v5\ARM\ARM_Compiler_5.06u7\Bin\..\include\string.h
 f103zet6_module\uart_dev.o: D:\Keil_v5\ARM\ARM_Compiler_5.06u7\Bin\..\include\stdio.h

@@ -25,6 +25,8 @@ f103zet6_module\driver_oled.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal
 f103zet6_module\driver_oled.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h
 f103zet6_module\driver_oled.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h
 f103zet6_module\driver_oled.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h
+f103zet6_module\driver_oled.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h
+f103zet6_module\driver_oled.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h
 f103zet6_module\driver_oled.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h
 f103zet6_module\driver_oled.o: D:\Keil_v5\ARM\ARM_Compiler_5.06u7\Bin\..\include\stdlib.h
 f103zet6_module\driver_oled.o: ..\Module_Drivers\OLED\oledfont.h

@@ -15,7 +15,7 @@ static char g_ESP8266DataBuffer[INPUT_BUF_LEN];
 static int g_DataBuffIndex = 0;//用作解析数据的索引
 static int g_DataLen = 0;//接收到的数据长度
 
-
+extern osMessageQueueId_t InputEventQueueHandle;//声明一下外部输入事件队列
 
 
 
@@ -81,8 +81,9 @@ static void ESP8266DataProcessCallback(char c)
 				event.itype = INPUT_EVENT_TYPE_NET;//输入事件的类型
 				strncpy(event.str, buf, g_DataLen);//将buf中的数据放到输入事件中去
 				event.str[g_DataLen] = '\0';//给数据的末尾加上结束符
-				PutInputEvent(&event);//将事件放到环形缓冲区
-				
+				// PutInputEvent(&event);//将事件放到环形缓冲区
+				osMessageQueuePut(InputEventQueueHandle, &event, NULL, 0);//向输入事件队列发队列
+								
 				g_status = INIT_STATUS;//恢复状态为初始
 				g_DataBuffIndex = 0;
 				g_DataLen = 0;

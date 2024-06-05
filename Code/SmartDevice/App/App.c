@@ -198,7 +198,7 @@ void SmartDeviceControl(char *strJson)
     printf("status:%d\r\n", status);
     if(strncmp(dev, "lamp", 4) == 0)
     {
-        printf("got the lamp");
+        printf("got the lamp\r\n");
         which = dev[4] - '0';
         ptLED = GetLEDDevice(which);
         ptLED->LEDcontrol(ptLED, status);
@@ -207,10 +207,44 @@ void SmartDeviceControl(char *strJson)
 }
 
 
-void App()
+// void App()
+// {
+//     char strjson[100];
+//     InputEvent Event;
+//     //1.初始化各类设备
+//     HardwareInit();
+
+//     //2.连接WIFI
+//     WIFIConnect();
+
+//     //3.在OLED显示IP,端口
+//     DisplayNetInfo();
+
+//     while (1)
+//     {
+//         //4.读取InputEvent
+//         if(0 == GetInputEvent(&Event))
+//         {
+//             //5.转换为Json
+//             if(0 == ConvertInputEventToJson(&Event, strjson))
+//                 //6.控制设备
+//                 SmartDeviceControl(strjson);
+//         }
+
+        
+//     }
+// }
+
+
+
+/**
+ * @brief 供RTOS初始化调用
+ * @version 1.0
+ * @Author huaj 
+ * @date 2024-06-04
+*/
+void Init_Connect_Display()
 {
-    char strjson[100];
-    InputEvent Event;
     //1.初始化各类设备
     HardwareInit();
 
@@ -219,18 +253,4 @@ void App()
 
     //3.在OLED显示IP,端口
     DisplayNetInfo();
-
-    while (1)
-    {
-        //4.读取InputEvent
-        if(0 == GetInputEvent(&Event))
-        {
-            //5.转换为Json
-            if(0 == ConvertInputEventToJson(&Event, strjson))
-                //6.控制设备
-                SmartDeviceControl(strjson);
-        }
-
-        
-    }
 }

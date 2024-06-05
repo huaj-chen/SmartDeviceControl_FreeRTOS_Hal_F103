@@ -50,7 +50,7 @@ int fgetc(FILE *f)
 */
 void EnableUART3IRQ()
 {
-	HAL_NVIC_SetPriority(USART3_IRQn, 0, 1);
+	HAL_NVIC_SetPriority(USART3_IRQn, 6, 0);
 	HAL_NVIC_EnableIRQ(USART3_IRQn);
 
 	__HAL_UART_ENABLE_IT(&huart3,UART_IT_RXNE);

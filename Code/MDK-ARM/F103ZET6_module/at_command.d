@@ -1,9 +1,9 @@
 f103zet6_module\at_command.o: ..\SmartDevice\Net\AT_Command\AT_Command.c
 f103zet6_module\at_command.o: ..\SmartDevice\Net\AT_Command\AT_Command.h
 f103zet6_module\at_command.o: D:\Keil_v5\ARM\ARM_Compiler_5.06u7\Bin\..\include\string.h
-f103zet6_module\at_command.o: ..\SmartDevice\Net\Net_system.h
-f103zet6_module\at_command.o: ..\SmartDevice\Net\Net_device.h
-f103zet6_module\at_command.o: ..\SmartDevice\Device\UART\UART_dev.h
+f103zet6_module\at_command.o: ../SmartDevice/Net/Net_system.h
+f103zet6_module\at_command.o: ../SmartDevice/Net/Net_device.h
+f103zet6_module\at_command.o: ../SmartDevice/Device/UART/UART_dev.h
 f103zet6_module\at_command.o: ../SmartDevice/Kernel_abstr_layer(KAL)/KAL_UART_dev.h
 f103zet6_module\at_command.o: ../SmartDevice/Chip_abstr_layer(CAL)/CAL_UART_dev.h
 f103zet6_module\at_command.o: ../Module_Drivers/driver_USART.h
@@ -33,10 +33,12 @@ f103zet6_module\at_command.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_
 f103zet6_module\at_command.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h
 f103zet6_module\at_command.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h
 f103zet6_module\at_command.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h
+f103zet6_module\at_command.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h
+f103zet6_module\at_command.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h
 f103zet6_module\at_command.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h
 f103zet6_module\at_command.o: ../Core/Inc/usart.h
 f103zet6_module\at_command.o: ../Module_Drivers/Ring_buffer.h
-f103zet6_module\at_command.o: ..\SmartDevice\Device\UART\UART_dev.h
+f103zet6_module\at_command.o: ../SmartDevice/Device/UART/UART_dev.h
 f103zet6_module\at_command.o: D:\Keil_v5\ARM\ARM_Compiler_5.06u7\Bin\..\include\stdio.h
 f103zet6_module\at_command.o: ../SmartDevice/Kernel_abstr_layer(KAL)/KAL_Time.h
 f103zet6_module\at_command.o: ../SmartDevice/Input/Input_system.h

@@ -32,6 +32,8 @@ f103zet6_module\display_system.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_
 f103zet6_module\display_system.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h
 f103zet6_module\display_system.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h
 f103zet6_module\display_system.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h
+f103zet6_module\display_system.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h
+f103zet6_module\display_system.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h
 f103zet6_module\display_system.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h
 f103zet6_module\display_system.o: ../Module_Drivers/I2C/driver_I2C.h
 f103zet6_module\display_system.o: ../Core/Inc/main.h

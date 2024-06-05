@@ -20,7 +20,7 @@ int ConvertInputEventToJson(PInputEvent ptEvent, char* pcJson)
     }
     else if (ptEvent->itype == INPUT_EVENT_TYPE_KEY) //输入事件类型为按键输入
     {
-        if(ptEvent->ipressure)
+        if(ptEvent->ipressure)//判断压力是否为1，为1表示按下
         {
             return -1;
         }
